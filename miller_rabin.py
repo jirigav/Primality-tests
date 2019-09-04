@@ -1,7 +1,7 @@
 from random import randint
 
 
-def prime_test(n, loops):
+def is_probably_prime(n, loops):
     if n < 3:
         return n == 2
 
