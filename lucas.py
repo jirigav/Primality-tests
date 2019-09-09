@@ -2,22 +2,29 @@ from random import randint
 from sympy.ntheory import factorint  # sympy required "pip install sympy"
 
 
-def is_probably_prime(number, number_of_loops=1):
+def is_probably_prime(n, k=1):
+    """
+    Lucas primality test
 
-    if number < 3 or not number % 2:
+    :param n: Number to be tested
+    :param k: number of iterations, more iterations equals higher accuracy and time complexity
+    :return: True if number is probably prime, otherwise False
+    """
+
+    if n < 3 or not n % 2:
         return number == 2
 
-    for _ in range(number_of_loops):
+    for _ in range(k):
 
-        a = randint(2, number - 1)
+        a = randint(2, n - 1)
 
-        if pow(a, number - 1, number) != 1:
+        if pow(a, n - 1, n) != 1:
             return False
 
-        p_factors = factorint(number - 1)
+        p_factors = factorint(n - 1)
 
         for q in p_factors:
-            if pow(a, (number - 1)//q, number) == 1:
+            if pow(a, (n - 1)//q, n) == 1:
                 break
 
         else:

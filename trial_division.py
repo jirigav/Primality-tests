@@ -1,17 +1,23 @@
 from math import sqrt
 
 
-def is_prime(number):
+def is_prime(n):
+    """
+    Trial division
 
-    if number < 6:
-        return number in {2, 3, 5}
+    :param n: Number to be tested
+    :return: True if number is prime, otherwise False
+    """
 
-    if not number % 2 or not number % 3:
+    if n < 6:
+        return n in {2, 3, 5}
+
+    if not n % 2 or not n % 3:
         return False
 
-    end = int(sqrt(number)) + 1
+    end = int(sqrt(n)) + 1
     for i in range(5, end, 6):
-        if not number % i or not number % (i + 2):
+        if not n % i or not n % (i + 2):
             return False
     return True
 
