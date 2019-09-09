@@ -10,11 +10,17 @@
 ## Fermat primality test
 
 * fermat.py
+* The simplest probabilistic primality test
+* Takes number of loops as a second argument. 
 
 ## Miller–Rabin primality test
 
 * miller_rabin.py
+* Probabilistic test
+* Takes number of loops as a second argument. 
 
 ## Lucas primality test
 
-*  	lucas.py
+* lucas.py
+* Probabilistic test
+* Takes number of loops as a second argument. 
