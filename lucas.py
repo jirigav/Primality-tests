@@ -8,7 +8,6 @@ def is_probably_prime(number, number_of_loops=1):
         return number == 2
 
     for _ in range(number_of_loops):
-        b = True
 
         a = randint(2, number - 1)
 
@@ -19,10 +18,9 @@ def is_probably_prime(number, number_of_loops=1):
 
         for q in p_factors:
             if pow(a, (number - 1)//q, number) == 1:
-                b = False
                 break
 
-        if b:  # get rid off b would be nice
+        else:
             return True
 
     return False
