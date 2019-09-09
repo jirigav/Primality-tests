@@ -1,7 +1,7 @@
 from random import randint
 
 
-def is_probably_prime(number, loops):
+def is_probably_prime(number, number_of_loops=1):
     if number < 4:
         return number == 2 or number == 3
 
@@ -10,7 +10,7 @@ def is_probably_prime(number, loops):
     while not d % 2:
         s += 1
         d //= 2
-    for i in range(loops):
+    for i in range(number_of_loops):
         a = randint(2, number - 2)
         x = pow(a, d, number)
 
