@@ -19,8 +19,16 @@
 * Probabilistic test
 * Takes number of loops as a second argument. 
 
+## Solovay–Strassen primality test
+
+* solovay_strassen.py
+* needs utils/jacobi.py to work
+* Probabilistic test
+* Takes number of loops as a second argument. 
+
 ## Lucas primality test
 
 * lucas.py
+* needs SymPy to work `pip install sympy`
 * Probabilistic test
 * Takes number of loops as a second argument. 
